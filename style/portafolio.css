@@ -1,0 +1,432 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #f2f3f5;
+    color: #1f2933;
+    line-height: 1.65;
+}
+
+/* ================= ANIMACIONES ================= */
+section, header, footer {
+    animation: appear 0.7s ease both;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= HEADER ================= */
+header {
+    background: linear-gradient(90deg, #1f2933, #4f6d7a) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* ================= HERO ================= */
+section.bg-dark.bg-opacity-25 {
+    background: linear-gradient(180deg, #eef2f7, #f2f3f5) !important;
+}
+
+/* ================= SECCIONES ================= */
+section.container {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 3rem 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+/* alternar color */
+section.container:nth-of-type(even) {
+    background: #eef2f7;
+}
+
+/* ================= TITULOS ================= */
+h2, h3 {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.3rem;
+}
+
+h3::after {
+    content: '';
+    width: 55px;
+    height: 4px;
+    background: #4f6d7a;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+/* ================= TEXTO ================= */
+p, li {
+    font-size: 1.05rem;
+    color: #3a3a3a;
+}
+
+/* ================= IMAGENES ================= */
+section img {
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+}
+
+/* hero */
+#bienvenida img {
+    float: right;
+    margin-left: 2rem;
+}
+
+/* metodologia y tecnologias */
+#metodologia img,
+#tecnologias img {
+    float: left;
+    margin-right: 2rem;
+}
+
+/* limpiar floats */
+section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ================= TARJETAS ================= */
+.unidad-card {
+    border: none;
+    border-radius: 18px;
+    padding: 1.6rem;
+    background: linear-gradient(180deg, #ffffff, #f6f8fb);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+}
+
+.unidad-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 55px rgba(0,0,0,0.15);
+}
+
+.unidad-card h5 {
+    font-weight: 700;
+    color: #4f6d7a;
+}
+
+.unidad-card h6 {
+    color: #6b7280;
+}
+
+.unidad-card i {
+    color: #9fb8ad;
+}
+
+/* info extra */
+.extra-info {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.unidad-card:hover .extra-info {
+    opacity: 1;
+    max-height: 180px;
+}
+
+/* ================= TECNOLOGIAS ================= */
+#tecnologias .col-md-4 {
+    background: linear-gradient(180deg, #ffffff, #f1f5f9);
+    padding: 2rem;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+#tecnologias .col-md-4:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: linear-gradient(90deg, #1f2933, #4f6d7a) !important;
+    margin-top: 4rem;
+}
+
+footer p {
+    color: #e5e7eb;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    #bienvenida img,
+    #metodologia img,
+    #tecnologias img {
+        float: none;
+        margin: 0 auto 1.5rem;
+        display: block;
+    }
+
+    section.container {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+/* ================= UPGRADE FONDO ================= */
+body {
+    background:
+        radial-gradient(circle at top left, #e1e8f0 0%, transparent 45%),
+        radial-gradient(circle at bottom right, #d6e0ea 0%, transparent 50%),
+        #f2f3f5;
+}
+
+
+/* ================= ACENTO EN SECCIONES ================= */
+section.container {
+    position: relative;
+    overflow: hidden;
+}
+
+section.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg, #4f6d7a, #9fb8ad);
+    opacity: 0.85;
+}
+
+
+@keyframes smoothUp {
+    from {
+        opacity: 0;
+        transform: translateY(45px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+section.container {
+    animation: smoothUp 0.9s cubic-bezier(.25,.8,.25,1) both;
+}
+
+
+/* ================= TARJETAS PRO ================= */
+.unidad-card {
+    position: relative;
+}
+
+.unidad-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #4f6d7a, #9fb8ad);
+    border-radius: 18px 0 0 18px;
+}
+
+
+.unidad-card i {
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.unidad-card:hover i {
+    transform: translateY(6px);
+    color: #4f6d7a;
+}
+
+
+section img {
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+section img:hover {
+    transform: scale(1.04) rotate(-0.6deg);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.18);
+}
+
+
+h3::after {
+    background: linear-gradient(90deg, #4f6d7a, #9fb8ad);
+}
+
+/* ================= FIX DROPDOWN ================= */
+header {
+    position: fixed; /* Fijo al top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Para que cubra todo el ancho */
+    z-index: 10000; /* Encima de todo */
+    background: linear-gradient(90deg, #1f2933, #4f6d7a); /* tu fondo actual */
+}
+
+/* Evitar que las secciones queden debajo del header */
+body {
+    padding-top: 80px; /* Ajusta según el alto de tu header */
+}
+
+
+        /* FOTO DE PERFIL */
+        .profile-pic {
+            max-width: 150px;
+            border-radius: 50%;
+            transition: transform 0.5s ease;
+        }
+        .profile-pic:hover {
+            transform: scale(1.05) rotate(-1deg);
+        }
+
+        /* CONTAINER DE FOTO Y DATOS */
+        .profile-header {
+            background: linear-gradient(145deg, #f0f4f8, #e3ebf2);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        /* HABILIDADES Y PROYECTOS */
+        .unidad-card {
+            border-radius: 12px;
+            background: linear-gradient(135deg, #ffffff, #e6f0ff);
+            transition: all 0.3s ease;
+            cursor: default;
+            display: inline-block;
+        }
+        .unidad-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        /* TABS HOVER */
+        .nav-tabs .nav-link:hover {
+            background: #f0f4f8;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        /* ESCALA SUTIL PARA PROYECTOS */
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+
+        /* TEXTO MÁS LEGIBLE */
+        .fs-5 {
+            line-height: 1.7;
+            color: #2c3e50;
+        }
+    
+  .tech-card {
+    background: rgba(79, 109, 122, 0.08); /* color muy sutil */
+    border: 1px solid rgba(79, 109, 122, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.tech-card h5 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.tech-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #4f6d7a;
+}
+
+.tech-card:hover {
+    background: rgba(79, 109, 122, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* TARJETA MODERNA */
+.modern-card {
+    background: rgba(79, 109, 122, 0.08);
+    width: 100%;
+    height: 150px;
+    perspective: 1000px;
+    border-radius: 14px;
+    border: 1px solid rgba(79, 109, 122, 0.2);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.modern-card:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 14px;
+}
+
+.modern-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 14px;
+}
+
+.flip-card-front {
+    font-weight: 600;
+    color: #4f6d7a;
+    font-size: 1.1rem;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+/* Resplandor suave al pasar */
+.modern-card:hover .flip-card-front,
+.modern-card:hover .flip-card-back {
+    box-shadow: 0 0 20px rgba(79, 109, 122, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) { .modern-card { height: 140px; } }
+@media (max-width: 768px) { 
+    .modern-card { height: 130px; } 
+    .flip-card-front, .flip-card-back { font-size:0.95rem;}
+}
+@media (max-width: 576px) { 
+    .modern-card { height: 120px; } 
+    .flip-card-front, .flip-card-back { font-size:0.9rem;}
+}
+

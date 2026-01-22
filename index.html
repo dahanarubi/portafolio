@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio DWOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- TU CSS SIEMPRE AL FINAL -->
+<link rel="stylesheet" href="style/portafolio.css">
+
+
+    <style>
+        /* solo comportamiento, no diseño */
+        .extra-info {
+            display: none;
+        }
+        .unidad-card:hover .extra-info {
+            display: block;
+        }
+        .unidad-card {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================= HEADER PRINCIPAL ================= -->
+<header class="bg-dark text-white p-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <h4 class="mb-0">Portafolio DWOS</h4>
+
+        <div class="dropdown">
+            <button class="btn btn-outline-light" type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle"></i> Acerca de
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="rubi.php">Dahana Rubi</a></li>
+                <li><a class="dropdown-item" href="airis.php">Airis Victoria</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<!-- ================= HEADER INSTITUCIONAL ================= -->
+<section class="bg-dark bg-opacity-25 py-5">
+    <div class="container text-center">
+        <h1 class="mb-3">UNIVERSIDAD TECNOLÓGICA DE COAHUILA</h1>
+        <h4>ING. EN DESARROLLO DE SOFTWARE ÁREA MULTIPLATAFORMA</h4>
+        <p class="mt-3">Introducción al Desarrollo Web Orientado a Servicios
+</p>
+        <p>5 DSMB</p>
+
+        <p class="mb-4">Dahana Rubi Montejano Rodriguez · Airis Victoria Rodriguez Cardona</p>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-25 rounded p-3">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="menu">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item"><a class="nav-link" href="#bienvenida">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#unidades">Unidades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#metodologia">Metodología y Aprendizaje</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologías</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</section>
+
+<!-- ================= BIENVENIDA ================= -->
+<section id="bienvenida" class="container py-5 my-5">
+    <div class="text-center mb-4">
+    <img src="image/hero.png" class="img-fluid" style="max-width:350px;">
+</div>
+
+    <h2 class="text-center mb-4">PORTAFOLIO DE EVIDENCIAS</h2>
+    <p class="text-center fs-5">
+        Este portafolio documenta el proceso de aprendizaje y
+        desarrollo de aplicaciones web orientadas a servicios, mostrando 
+        las competencias adquiridas en la integración de tecnologías frontend 
+        y backend, así como la aplicación de buenas prácticas de programación,
+        incluyendo la creación e integración de APIs y su despliegue en un hosting real.
+        reflejando el crecimiento técnico y práctico durante el cuatrimestre.
+        <br>
+        Sus objetivos principales son consolidar conocimiento y presentar evidencias de las
+        actividades realizadas en cada unidad.
+    </p>
+
+    <div class="text-center mt-5">
+        <i class="bi bi-chevron-double-down fs-2"></i>
+    </div>
+</section>
+
+<hr class="container my-5">
+
+
+
+<!-- ================= UNIDADES ================= -->
+<section id="unidades" class="container py-5 my-5">
+    <h3 class="text-center mb-3">Unidades de Materia</h3>
+    <p class="text-center fs-5 mb-5">
+        Cada unidad representa una etapa del aprendizaje, desde los fundamentos
+        teóricos hasta la implementación práctica de servicios web.
+    </p>
+
+    <div class="row g-5">
+
+    <!-- UNIDAD I -->
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 text-center unidad-card"
+             onclick="cargarUnidad('unidad_1.html')">
+            <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                    <h5>UNIDAD I</h5>
+                    <h6>Introducción al DWOS</h6>
+                    <p>Conceptos básicos y arquitectura SOA</p>
+
+                    <div class="extra-info mt-3">
+                        <hr>
+                        <p>
+                            Se estudian los fundamentos del desarrollo orientado a servicios
+                            y la arquitectura SOA.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <i class="bi bi-arrow-down-circle fs-4"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UNIDAD II -->
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 text-center unidad-card"
+             onclick="cargarUnidad('unidad_2.html')">
+            <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                    <h5>UNIDAD II</h5>
+                    <h6>Implementación de API</h6>
+                    <p>Uso e integración de APIs</p>
+
+                    <div class="extra-info mt-3">
+                        <hr>
+                        <p>
+                            Consumo de APIs REST, manejo de solicitudes HTTP
+                            y pruebas con Postman.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <i class="bi bi-arrow-down-circle fs-4"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UNIDAD III -->
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 text-center unidad-card"
+             onclick="cargarUnidad('unidad_3.html')">
+            <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                    <h5>UNIDAD III</h5>
+                    <h6>Desarrollo de API</h6>
+                    <p>Creación de servicios</p>
+
+                    <div class="extra-info mt-3">
+                        <hr>
+                        <p>
+                            Diseño y desarrollo de APIs propias
+                            aplicando buenas prácticas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <i class="bi bi-arrow-down-circle fs-4"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UNIDAD IV -->
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 text-center unidad-card"
+             onclick="cargarUnidad('unidad_4.html')">
+            <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                    <h5>UNIDAD IV</h5>
+                    <h6>Implementación</h6>
+                    <p>Aplicación práctica</p>
+
+                    <div class="extra-info mt-3">
+                        <hr>
+                        <p>
+                            Integración completa de servicios
+                            en una aplicación funcional.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <i class="bi bi-arrow-down-circle fs-4"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<hr class="container my-5">
+
+<!-- ================= METODOLOGÍA ================= -->
+<section id="metodologia" class="container py-5 my-5">
+    <div class="text-center mb-4">
+    <img src="image/metodologias.png" class="img-fluid" style="max-width:250px;">
+</div>
+
+    <h3 class="text-center mb-4">Metodología y Aprendizaje</h3>
+
+    <p class="text-center fs-5 mb-4">
+        Aprenderemos a desarrollar aplicaciones web orientadas a servicios, 
+        integrando APIs, manejando bases de datos, aplicando buenas prácticas 
+        de programación y publicando proyectos en hosting real, reforzando 
+         competencias técnicas y prácticas en desarrollo web.
+    </p>
+
+    <div class="texto-bloque" style="flex:1; min-width:250px;">
+            <p>
+            El desarrollo del portafolio se realizó siguiendo una metodología incremental,
+        permitiendo reforzar progresivamente los conocimientos adquiridos.    
+            </p>
+        
+          
+    <div class="d-flex flex-wrap align-items-center justify-content-center gap-4">
+        <!-- LISTA -->
+
+            <p> · Análisis de requerimientos</p>
+            <p>➡ Investigación teórica</p>
+            <p>➡ Desarrollo de evidencias</p>
+            <p>➡ Pruebas y validación</p>
+            <p>➡ Documentación final ·</p>
+        
+
+        
+    </div>
+</section>
+
+<section id="tecnologias" class="container py-5 my-5">
+    <div class="text-center mb-4">
+        <img src="image/tecnologia.png" class="img-fluid" style="max-width:300px;">
+    </div>
+
+    <h3 class="text-center mb-5">Tecnologías y herramientas</h3>
+
+    <div class="row justify-content-center g-4">
+        <!-- Tarjeta Frontend -->
+        <div class="col-sm-6 col-md-4">
+            <div class="flip-card modern-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h5>Frontend</h5>
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-center align-items-center">
+                        <p>HTML5 · CSS · Bootstrap</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta Backend -->
+        <div class="col-sm-6 col-md-4">
+            <div class="flip-card modern-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h5>Backend</h5>
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-center align-items-center">
+                        <p>PHP · JavaScript</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta Herramientas -->
+        <div class="col-sm-6 col-md-4">
+            <div class="flip-card modern-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front d-flex justify-content-center align-items-center">
+                        <h5>Herramientas</h5>
+                    </div>
+                    <div class="flip-card-back d-flex justify-content-center align-items-center">
+                        <p>XAMPP · VS Code</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= CONCLUSIÓN ================= -->
+<section id="conclusion" class="container py-5 my-5">
+    <h3 class="text-center mb-4">""</h3>
+    <p class="text-center fs-5">
+        El desarrollo de este portafolio permitió consolidar los conocimientos adquiridos
+        durante el cuatrimestre, comprendiendo la importancia de los servicios web y APIs
+        en el desarrollo de aplicaciones modernas.
+    </p>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white text-center py-4">
+    <p class="mb-1">Portafolio de Evidencias - 2026</p>
+    <p class="mb-1">Dahana Rubi Montejano · Airis Victoria Rodríguez</p>
+    <p class="mb-0">Universidad Tecnologica de Coahuila</p>
+    <p class="mb-0">Km. 9 Carretera a Saltillo 4.5(232)</p>
+    <p class="mb-0">Universidad Ramos Arizpe, Coah cp.25220</p>
+    <p class="mb-0">© 2026 – Todos los derechos reservados
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function cargarUnidad(url) {
+    document.body.classList.add('opacity-75');
+    setTimeout(() => {
+        window.location.href = url;
+    }, 300);
+}
+</script>
+
+</body>
+</html>

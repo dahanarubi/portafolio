@@ -1,3 +1,19 @@
+.investigacion img {
+    max-height: 300px;       /* altura uniforme */
+    width: auto;             /* ancho proporcional */
+    border-radius: 12px;     
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    margin-bottom: 15px;     /* espacio entre imagen y texto */
+}
+.investigacion h4 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.investigacion ul {
+    margin-top: 10px;
+    text-align: left;        /* para que las listas queden alineadas */
+    display: inline-block;   /* para que no ocupe todo el ancho */
+}
 /* ================= RESET ================= */
 * {
     margin: 0;

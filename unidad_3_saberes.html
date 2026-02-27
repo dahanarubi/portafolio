@@ -16,7 +16,7 @@
 <header class="bg-dark text-white p-3">
     <div class="container d-flex justify-content-between align-items-center">
         <h4 class="mb-0">Unidad 3 · Saberes</h4>
-        <a href="unidad_3.html" class="btn btn-outline-light">← Volver</a>
+        <a href="unidad_2.html" class="btn btn-outline-light">← Volver</a>
     </div>
 </header>
 
@@ -29,6 +29,7 @@
         <p class="mb-5">
             En esta unidad se estudian los frameworks para el desarrollo de interfaces de programación
             de aplicaciones (API) y la implementación de APIs para aplicaciones orientadas a servicios.
+            Se explicarán tanto los conceptos teóricos como ejemplos prácticos y buenas prácticas de desarrollo.
         </p>
 
         <!-- Frameworks -->
@@ -39,13 +40,17 @@
             <div class="col-md-7">
                 <h4>1. Frameworks para desarrollo de APIs</h4>
                 <p>
-                    Los frameworks proporcionan herramientas y estructuras que facilitan el desarrollo
-                    de APIs eficientes, escalables y seguras.
+                    Los frameworks son conjuntos de herramientas y librerías que facilitan la creación
+                    de aplicaciones y servicios web. Permiten trabajar de manera más rápida, con código
+                    organizado y siguiendo estándares recomendados.
                 </p>
                 <ul>
-                    <li>Flask, Django, Express, Spring Boot.</li>
-                    <li>Estandarización y aceleración del desarrollo.</li>
-                    <li>Mantenibilidad y buenas prácticas.</li>
+                    <li>Flask: framework ligero para Python, ideal para APIs pequeñas y medianas.</li>
+                    <li>Django: framework robusto para Python, con muchas herramientas integradas.</li>
+                    <li>Express: framework para Node.js, rápido y minimalista, usado en aplicaciones escalables.</li>
+                    <li>Spring Boot: framework para Java, potente para aplicaciones empresariales y servicios REST.</li>
+                    <li>Facilitan la integración de bases de datos y autenticación de usuarios.</li>
+                    <li>Ayudan a implementar buenas prácticas de seguridad y manejo de errores.</li>
                 </ul>
             </div>
         </div>
@@ -60,14 +65,21 @@
             <div class="col-md-7 order-md-1">
                 <h4>2. Desarrollo de una API</h4>
                 <p>
-                    Crear una API implica definir endpoints, métodos HTTP y asegurar la comunicación
-                    entre aplicaciones o servicios.
+                    Una API (Interfaz de Programación de Aplicaciones) permite que distintas aplicaciones
+                    se comuniquen entre sí. El desarrollo de APIs requiere definir claramente los endpoints,
+                    métodos HTTP y estructuras de datos que se intercambiarán.
                 </p>
                 <ul>
-                    <li>Diseño y documentación de la API.</li>
-                    <li>Implementación de rutas y endpoints.</li>
-                    <li>Pruebas, seguridad y consumo de la API.</li>
+                    <li>Definición de endpoints: URLs que representan los recursos y acciones disponibles.</li>
+                    <li>Métodos HTTP: GET para obtener información, POST para crear datos, PUT/PATCH para actualizar y DELETE para eliminar.</li>
+                    <li>Seguridad: autenticación con tokens o claves de API, uso de HTTPS.</li>
+                    <li>Pruebas: asegurarse que cada endpoint funciona correctamente y devuelve la información esperada.</li>
+                    <li>Documentación: uso de Swagger o Postman para describir cómo usar la API.</li>
                 </ul>
+                <p>
+                    Ejemplo práctico: una API de tienda en línea podría tener endpoints como
+                    <code>/productos</code> para listar productos o <code>/usuarios/login</code> para autenticar usuarios.
+                </p>
             </div>
         </div>
 
@@ -81,12 +93,14 @@
             <div class="col-md-7">
                 <h4>3. Identificación de frameworks en aplicaciones orientadas a servicios</h4>
                 <p>
-                    Reconocer los frameworks más usados permite seleccionar la herramienta correcta
-                    según la necesidad del proyecto y los servicios que se desean implementar.
+                    Elegir el framework correcto es clave para el éxito de un proyecto. Dependerá de factores como
+                    la escala de la aplicación, el lenguaje de programación y las necesidades de seguridad y rendimiento.
                 </p>
                 <ul>
-                    <li>Comparación de frameworks según rendimiento y escalabilidad.</li>
-                    <li>Selección de frameworks según tipo de servicio.</li>
+                    <li>Comparar rendimiento y escalabilidad de diferentes frameworks.</li>
+                    <li>Revisar documentación y comunidad: frameworks con buena documentación y soporte son más fáciles de aprender.</li>
+                    <li>Compatibilidad con bases de datos, servicios externos y librerías necesarias.</li>
+                    <li>Ejemplos: elegir Flask para prototipos rápidos y Django para proyectos con funcionalidades completas.</li>
                 </ul>
             </div>
         </div>
@@ -101,14 +115,22 @@
             <div class="col-md-7 order-md-1">
                 <h4>4. Proceso de desarrollo de APIs</h4>
                 <p>
-                    El proceso de desarrollo de una API sigue pasos claros desde el diseño hasta la implementación y pruebas.
+                    El desarrollo de APIs sigue un proceso estructurado que asegura calidad y funcionalidad.
+                    Incluye planificación, diseño, implementación, pruebas y mantenimiento.
                 </p>
                 <ul>
-                    <li>Planeación y análisis de requerimientos.</li>
-                    <li>Diseño de endpoints y rutas.</li>
-                    <li>Implementación y pruebas unitarias.</li>
-                    <li>Documentación y mantenimiento.</li>
+                    <li>Planeación: definir objetivos, funcionalidades y recursos necesarios.</li>
+                    <li>Análisis de requerimientos: determinar qué datos y acciones necesita la aplicación.</li>
+                    <li>Diseño: modelar la estructura de endpoints y datos, crear diagramas de flujo.</li>
+                    <li>Implementación: codificar la API usando el framework elegido, siguiendo buenas prácticas.</li>
+                    <li>Pruebas unitarias y de integración: asegurar que cada función y endpoint funciona correctamente.</li>
+                    <li>Documentación: guías de uso para desarrolladores y usuarios de la API.</li>
+                    <li>Mantenimiento: actualizar la API según nuevas necesidades y corregir errores.</li>
                 </ul>
+                <p>
+                    Ejemplo: una API bancaria podría requerir endpoints para consultar saldo, transferir dinero
+                    y ver historial de transacciones, con seguridad reforzada y registro de logs.
+                </p>
             </div>
         </div>
 

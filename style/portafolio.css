@@ -1,18 +1,30 @@
+/* Estilo general de las secciones de investigación */
 .investigacion img {
-    max-height: 300px;       /* altura uniforme */
-    width: auto;             /* ancho proporcional */
-    border-radius: 12px;     
-    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-    margin-bottom: 15px;     /* espacio entre imagen y texto */
+    max-height: 250px;      /* altura uniforme */
+    object-fit: cover;      /* no se deforma la imagen */
+    width: 100%;            /* ocupa todo el ancho del contenedor */
+    border-radius: 10px;    /* bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* sombra suave */
+    margin-bottom: 20px;    /* espacio debajo de la imagen */
 }
+
 .investigacion h4 {
-    margin-top: 10px;
     margin-bottom: 15px;
 }
+
 .investigacion ul {
     margin-top: 10px;
-    text-align: left;        /* para que las listas queden alineadas */
-    display: inline-block;   /* para que no ocupe todo el ancho */
+}
+
+hr {
+    border-top: 2px solid #ccc;
+}
+
+/* Ajustes responsivos extra (opcional) */
+@media (max-width: 767px) {
+    .investigacion img {
+        max-height: 200px;
+    }
 }
 /* ================= RESET ================= */
 * {
@@ -474,3 +486,4 @@ body {
     .modern-card { height: 120px; } 
     .flip-card-front, .flip-card-back { font-size:0.9rem;}
 }
+
